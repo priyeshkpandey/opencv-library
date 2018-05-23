@@ -315,11 +315,7 @@ public class ImageRecognition {
     }
 
     private static String getIosUdid() throws Exception {
-        String udid = System.getenv("UDID");
-        if (udid==null){
-            throw new Exception("$UDID was null, set UDID environment variable and try again");
-        }
-        return udid;
+        return IosUdidFactory.getUdid();
     }
 
     private static Size getIosScreenSizePointsFromPropertiesFile(String productType) throws UnsupportedOperationException, Exception {
