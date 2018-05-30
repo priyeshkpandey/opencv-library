@@ -346,7 +346,7 @@ public class AkazeImageFinder {
         } else {
             akazePath = "lib/linux/akaze/akaze_match";
         }
-        String[] akazeMatchCommand = {akazePath, object_filename, scene_filename, "--json", jsonFilename, "--dthreshold", "0.00000000001"};
+        String[] akazeMatchCommand = {akazePath, object_filename, scene_filename, "--json", jsonFilename, "--dthreshold", "0.01"};
 
         try {
             ProcessBuilder p = new ProcessBuilder(akazeMatchCommand);
